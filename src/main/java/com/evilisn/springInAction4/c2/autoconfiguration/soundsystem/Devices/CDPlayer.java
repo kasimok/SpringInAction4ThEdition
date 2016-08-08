@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 public class CDPlayer implements MediaPlayer {
     private CompactDisk cd;
 
-    @Autowired
     public CDPlayer(CompactDisk cd) {
         this.cd = cd;
     }
@@ -21,9 +20,10 @@ public class CDPlayer implements MediaPlayer {
         cd.play();
     }
 
+    public CompactDisk getCd() {
+        return cd;
+    }
 
-    //Autowire 可以用在构造函数上，也可以用在Setter上，也可以用在任意方法的参数上
-    @Autowired
     public void insertDisk(CompactDisk cd) {
         this.cd = cd;
     }
