@@ -47,7 +47,7 @@ public class GeneralConfig {
         return new CDPlayer(playGodOfWar());
     }
 
-//    __________________________________________________
+    //__________________________________________________
     @Bean
     public CDPlayer cdPlayer(CompactDisk compactDisk){
         return new CDPlayer(compactDisk);
